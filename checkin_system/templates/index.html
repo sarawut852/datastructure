@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ระบบเช็คอินพนักงาน</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🕒 ระบบเช็คอินพนักงาน</h1>
+
+<form action="/checkin" method="post">
+<input type="text" name="emp_id" placeholder="กรอกรหัสพนักงาน" required>
+<br>
+<button class="btn-green">Check-in</button>
+</form>
+
+<form action="/checkout" method="post">
+<input type="text" name="emp_id" placeholder="กรอกรหัสพนักงาน" required>
+<br>
+<button class="btn-red">Check-out</button>
+</form>
+
+<hr>
+
+<a class="menu-btn" href="/add_employee">เพิ่มพนักงาน</a>
+<a class="menu-btn" href="/employees">พนักงานทั้งหมด</a>
+<a class="menu-btn" href="/history">ประวัติการลงเวลา</a>
+
+</div>
+
+<div class="creator">
+จัดทำโดย : ศราวุธ อินทรเกตุ
+</div>
+
+</body>
+</html>
